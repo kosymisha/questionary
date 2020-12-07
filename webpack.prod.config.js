@@ -1,9 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.js',
-    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -13,15 +12,16 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: '/node_modules/',
-                use: [ 'babel-loader' ]
-            },
-            {
-                test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: [
+                    {
+                        loader: 'babel-loader'
+                    }
+                ]
             }
         ]
     },
     devServer: {
-        port: 3000
+        port: 3000,
+        open: true
     }
 };
