@@ -1,7 +1,13 @@
 import React from 'react'
+import Header from "./Header";
+import LeftNav from "./LeftNav";
+import "./App.css";
 
 const App = () => (
-    <div>App</div>
+    <div>
+        <Header/>
+        <LeftNav/>
+    </div>
 );
 
 export default App;
