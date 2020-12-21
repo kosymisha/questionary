@@ -28,7 +28,7 @@ html, body {
     width: 100%;
     font-size: 100%;
     line-height: 1;
-    font-size: 14px;
+    font-size: 20px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -70,4 +70,20 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: 400;
+}
+.content {
+    height: 2800px;
+    width: calc(100% - 250px);
+    padding: 10px;
+    position: relative;
+}
+.left-nav {
+    height: fit-content;
+    position: sticky;
+    top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
 }
