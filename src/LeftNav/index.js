@@ -1,8 +1,19 @@
 import React from "react";
-import classes from "./index.module.css";
 import Item from "./Item";
+import injectSheet from 'react-jss';
 
-const LeftNav = () => {
+const styles = {
+    container: {
+        position: "sticky",
+        top: "50px",
+        background: "darkgray",
+        color: "white",
+        width: "250px",
+        height: "fit-content",
+    }
+};
+
+const LeftNav = ({ classes }) => {
     return (
         <div className={classes.container}>
             <Item label="Create New Poll"/>
@@ -13,4 +24,4 @@ const LeftNav = () => {
     );
 };
 
-export default LeftNav;
+export default injectSheet(styles)(LeftNav);

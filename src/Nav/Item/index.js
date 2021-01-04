@@ -1,7 +1,14 @@
 import React from "react";
-import classes from "./index.module.css"
+import injectSheet from 'react-jss';
 
-const Item = ({ label }) => {
+const styles = {
+    container: {
+        width: "70px",
+        margin: "15px"
+    }
+};
+
+const Item = ({ classes, label }) => {
     return (
         <div className={classes.container}>
             {label}
@@ -9,4 +16,4 @@ const Item = ({ label }) => {
     );
 };
 
-export default Item;
+export default injectSheet(styles)(Item);
