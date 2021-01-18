@@ -1,5 +1,6 @@
 import React from "react";
 import injectSheet from 'react-jss';
+import { NavLink } from "react-router-dom";
 
 const styles = {
     container: {
@@ -7,10 +8,10 @@ const styles = {
     }
 };
 
-const Item = ({ classes, label }) => {
+const Item = ({ classes, label, path }) => {
     return (
         <div className={classes.container}>
-            {label}
+            <NavLink to={path} >{label}</NavLink>
         </div>
     );
 };

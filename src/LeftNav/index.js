@@ -16,10 +16,10 @@ const styles = {
 const LeftNav = ({ classes }) => {
     return (
         <div className={classes.container}>
-            <Item label="Create New Poll"/>
-            <Item label="Your Polls"/>
-            <Item label="Your Polls"/>
-            <Item label="Your Polls"/>
+            <Item path="/new-survey" label="New Survey"/>
+            <Item path="/settings" label="My surveys"/>
+            <Item path="/" label="Survey templates"/>
+            <Item path="/" label="Users"/>
         </div>
     );
 };
